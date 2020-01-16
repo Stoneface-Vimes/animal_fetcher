@@ -11,6 +11,8 @@ const fetchBreedDescription = function(breedName, callback) {
 
     if (data.length !== 0) {
       return callback(error = null, desc = data['0'].description);
+    } else {
+      return callback(error = null, desc = 'Invalid breed');
     }
   });
 };

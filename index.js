@@ -6,7 +6,8 @@ fetchBreedDescription(breedName, (error, desc) => {
   if (error) {
     console.log('Error fetch details:', error);
   } else {
-    console.log(desc);
+    desc !== 'Invalid breed' ? console.log(desc) : console.log('Invalid breed');
+
   }
 });
 
